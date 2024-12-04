@@ -26,6 +26,7 @@ import { zgPlugin } from "@ai16z/plugin-0g";
 import { goatPlugin } from "@ai16z/plugin-goat";
 import { bootstrapPlugin } from "@ai16z/plugin-bootstrap";
 // import { buttplugPlugin } from "@ai16z/plugin-buttplug";
+import { webSearchPlugin } from "@ai16z/plugin-web-search";
 import {
     coinbaseCommercePlugin,
     coinbaseMassPaymentsPlugin,
@@ -363,6 +364,7 @@ export function createAgent(
         character,
         plugins: [
             bootstrapPlugin,
+            webSearchPlugin,
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
                 : null,
@@ -392,6 +394,7 @@ export function createAgent(
                 : []),
             getSecret(character, "WALLET_SECRET_SALT") ? teePlugin : null,
             getSecret(character, "ALCHEMY_API_KEY") ? goatPlugin : null,
+            getSecret(character, "TAVILY_API_KEY" ) ? webSearchPlugin : null
         ].filter(Boolean),
         providers: [],
         actions: [],

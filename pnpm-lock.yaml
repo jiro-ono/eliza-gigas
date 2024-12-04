@@ -159,6 +159,9 @@ importers:
       '@ai16z/plugin-tee':
         specifier: workspace:*
         version: link:../packages/plugin-tee
+      '@ai16z/plugin-web-search':
+        specifier: workspace:*
+        version: link:../packages/plugin-web-search
       readline:
         specifier: 1.3.0
         version: 1.3.0
