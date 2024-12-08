@@ -28,6 +28,7 @@ import { zgPlugin } from "@ai16z/plugin-0g";
 import { goatPlugin } from "@ai16z/plugin-goat";
 import { bootstrapPlugin } from "@ai16z/plugin-bootstrap";
 // import { buttplugPlugin } from "@ai16z/plugin-buttplug";
+import { webSearchPlugin } from "@ai16z/plugin-web-search";
 import {
     coinbaseCommercePlugin,
     coinbaseMassPaymentsPlugin,
@@ -375,6 +376,7 @@ export function createAgent(
         character,
         plugins: [
             bootstrapPlugin,
+            webSearchPlugin,
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
                 : null,
@@ -414,6 +416,7 @@ export function createAgent(
                 ? flowPlugin
                 : null,
             getSecret(character, "APTOS_PRIVATE_KEY") ? aptosPlugin : null,
+            getSecret(character, "TAVILY_API_KEY" ) ? webSearchPlugin : null
         ].filter(Boolean),
         providers: [],
         actions: [],

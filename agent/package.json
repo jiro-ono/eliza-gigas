@@ -41,6 +41,11 @@
         "@ai16z/plugin-solana": "workspace:*",
         "@ai16z/plugin-starknet": "workspace:*",
         "@ai16z/plugin-tee": "workspace:*",
+<<<<<<< HEAD
+=======
+        "@ai16z/plugin-coinbase": "workspace:*",
+        "@ai16z/plugin-web-search": "workspace:*",
+>>>>>>> d819942d43e37a42b385edacf523938affa45473
         "readline": "1.3.0",
         "ws": "8.18.0",
         "yargs": "17.7.2"
